@@ -1,0 +1,164 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit;}
+
+table {border-collapse: collapse; border-spacing: 0;}
+caption, th, td {text-align: left; font-weight: normal;}
+form legend {display: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+ol, ul {list-style: none;}
+hr {display: none; visibility: hidden;}
+:focus {outline: 0;}
+
+a.play {
+	display: block;
+	position: absolute;
+	right: 	-6px;
+	top:		 13px;
+}
+
+a.follow-link {
+	float: right;
+	margin-right: -6px;
+}
+
+body {
+	margin: 10px;
+}
+
+body, a, a:visited, a:active {
+	text-decoration: none;
+	color: black;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+.extra-info {
+	color: black;
+	font-size: 0.7em;
+	overflow-x: hidden;
+}
+
+.tag {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+	width: 250px;
+	padding: 10px;
+	
+	-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+  -moz-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+  
+}
+
+h2 {
+	font-weight: bold;
+	margin-left: 53px;
+}
+
+ul.user-list-small {
+	clear: both;
+}
+
+.follow-all-link {
+	float: right;
+	position: relative;
+	margin-top: -10px;
+	margin-right: -10px;
+}
+
+.follow-all-link .first-plus {
+	position: absolute;
+	top: 0px;
+	right: 13px;
+}
+
+.follow-all-link .second-plus {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.tag .info {
+	margin-bottom: 3px;
+	height: 47px;
+}
+
+.image-badge {
+  background-image: url(http://a1.soundcloud.com/images/default_avatar_badge.png?taylor);
+  display: block;
+  width: 47px;
+  height: 47px;
+  float: left;
+  text-indent: -9999px; 
+}
+
+
+ul.user-list-small {
+  margin: 0 auto; }
+  ul.user-list-small li {
+    display: block;
+    height: 47px;
+    margin: 0 0px 1px 0;
+    color: white;
+    width: 250px;
+		-moz-border-radius: 10px;
+    
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+
+    -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+    -moz-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+
+    background-color: #f2f2f2; }
+    ul.user-list-small li .user-image-badge {
+      background-image: url(http://a1.soundcloud.com/images/default_avatar_badge.png?taylor);
+      display: block;
+      width: 47px;
+      height: 47px;
+      border-right: 1px solid white;
+      float: left;
+      text-indent: -9999px; }
+    ul.user-list-small li .user-info {
+      padding: 0 0 0 4px;
+      width: 187px;
+      display: block;
+      float: left;
+      position: relative;
+      height: 48px; }
+      ul.user-list-small li .user-info .private {
+        color: #ff6600; }
+      ul.user-list-small li .user-info .user-realname {
+        font-size: 10px;
+        display: block;
+        margin: 3px 0 0 0;
+        padding: 0;
+        color: #666666;
+        width: 138px;
+        white-space: nowrap;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis; }
+      ul.user-list-small li .user-info .user-link {
+        display: block;
+        font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1em;
+        text-decoration: none;
+        margin: 15px 0 0 0;
+        height: 32px;
+        position: absolute;
+        top: 0px;
+        padding: 0 0 0 0;
+        z-index: 2;
+        width: 180px;
+        white-space: nowrap;
+        overflow: hidden;
+        outline: 0; }
+      ul.user-list-small li .user-info .public-songs-info {
+        color: #333333;
+        font-size: 10px;
+        position: absolute;
+        bottom: 2px;
+        z-index: 1;
+        white-space: nowrap; }

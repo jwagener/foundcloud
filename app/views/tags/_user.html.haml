@@ -1,0 +1,9 @@
+%li.user.small{:class => "user-id-#{user.sc_id}"}
+	%a.user-image-badge{:href => user.permalink_url, :style => "background-image: url(#{user.avatar_url})"}= user.username	
+	%span.user-info
+		%a.user-link{:href => user.permalink_url}= user.username
+		%a.follow.follow-link{:href => "##{user.sc_id}", :title => 'follow'} +
+		%a.play{:href => "##{user.sc_id}", :title => 'player'} &gt;
+
+		%span.extra-info= [user.full_name, "Berlin"].reject(&:blank?).join(", ")
+		
