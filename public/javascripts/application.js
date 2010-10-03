@@ -1,6 +1,6 @@
 soundManager.url = '/'; // directory where SM2 .SWFs live
 soundManager.useFlashBlock = false;
-soundManager.useHTML5Audio = true;
+//soundManager.useHTML5Audio = true;
 
 var SC = {
 	user_ids_to_follow: [],
