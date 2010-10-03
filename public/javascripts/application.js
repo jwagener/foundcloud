@@ -5,7 +5,9 @@ soundManager.useFlashBlock = false;
 var SC = {
 	user_ids_to_follow: [],
 	Connect: {
-		client_id:  	'bisLB9wz3NHSmKmRcj2wQ',
+		//client_id:  	'bisLB9wz3NHSmKmRcj2wQ',
+		client_id:  	'pwUmpD7f9b9xflpfLzlvIw',
+		
 		oauth_token: 	null,
 		endpoint: 		'/connect',
 		callback:     function(){
@@ -49,7 +51,10 @@ function unfollow(id, callback){
 
 
 function sc_connect(){
-	var url = 'https://soundcloud.com/connect?client_id=' + SC.Connect.client_id + '&display=popup&response_type=token&redirect_uri=' + 'http://localhost:3001/sc_connect_complete.html'; 	
+	var redirect_uri = 'http://localhost:3001/sc_connect_complete.html';
+	var redirect_uri = 'http://topbillin.com/sc_connect_complete.html';
+	
+	var url = 'https://soundcloud.com/connect?client_id=' + SC.Connect.client_id + '&display=popup&response_type=token&redirect_uri=' +redirect_uri; 	
 	SC.Connect.popup_window = window.open(url ,"sc_connect_popup","location=1, width=456, height=500,toolbar=no,scrollbars=yes");
 }
 
