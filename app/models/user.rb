@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
         :username   => sc_user['username'],
         :permalink_url  => sc_user['permalink_url'],
         :sc_id      => sc_user['id'],
+        :follower_count => sc_user['followers_count'],
         :avatar_url => sc_user['avatar_url'].gsub('large', 'badge'),
         :city      => sc_user['city'],
         :full_name  => sc_user['full_name'],
