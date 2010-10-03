@@ -8,7 +8,7 @@
     <script src="/javascripts/jquery.cors.js"></script> 
     <script src="/javascripts/application.js"></script> 
     <link rel="stylesheet" href="/stylesheets/application.css" />
-  %body
+  %body{:data => (@tag.permalink if @tag.present?)}
     %h1
       TOPBILLIN'
       %span Helping you follow the best music since 2010

@@ -12,7 +12,10 @@ hr {display: none; visibility: hidden;}
 body {
   font-family : Helvetica, Arial, sans-serif;
   overflow: scroll;
+
   margin: 20px;
+	margin-left: 200px;
+
   -moz-user-select: none;
   -khtml-user-select : none;
 }

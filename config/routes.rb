@@ -11,7 +11,10 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.root :controller => :home
+  map.tag  '/:permalink', :controller => :home, :action => :index
   map.tag  '/:permalink.:format', :controller => :home, :action => :show
+
+#  map.tag  '/:permalink.:format', :controller => :home, :action => :show
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
