@@ -32,6 +32,10 @@ h1 {
   color: black;
   margin: 0 0 20px 0;
   opacity: 0.7;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 
 h1 span {
@@ -51,20 +55,27 @@ h2 {
   margin: 0 0 20px 0;
 }
 
+.content {
+  position: absolute;
+  top: 0px;
+}
+
 .tag {
   float: left;
   width: 250px;
   height: 1000px;
   opacity: 0.8;
-  -webkit-transition: opacity .5s ease-out,width .5s ease-out, -webkit-transform .5s ease-out, margin .5s ease-out;
-  -moz-transition: opacity .5s ease-out,width .5s ease-out;  
+  -webkit-transition: opacity .5s ease-out,width .5s ease-out, -webkit-transform .5s ease-out, margin .5s ease-out, background-color .5s ease-out;
+  -moz-transition: opacity .5s ease-out,width .5s ease-out, -webkit-transform .5s ease-out, margin .5s ease-out, background-color .5s ease-out;
   -webkit-transform: scale(1.0,1.0);
-  margin-top: 0px;
+  margin: 0 10px 0 10px;
+  padding: 100px 0 0 10px;
 }
 
 .tag.active {
   width: 300px;
   opacity: 1;
+  background-color: #f8f8f8;
 /*  -webkit-transform: scale(1.1,1.1);*/
 /*  margin-top: 100px; */
 }
