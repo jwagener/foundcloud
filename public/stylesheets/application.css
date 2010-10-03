@@ -9,6 +9,19 @@ ol, ul {list-style: none;}
 hr {display: none; visibility: hidden;}
 :focus {outline: 0;}
 
+.frame {
+	margin: auto;
+	width: 800px;
+	text-align: center;
+}
+
+
+.content {
+	margin: auto;
+	width: 800px;
+	text-align: left;
+}
+
 h1 {
 	background-image: url(/images/foundcloud.png);
   display: block;
@@ -55,7 +68,7 @@ body, a, a:visited, a:active {
 	margin-top: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-	width: 250px;
+	width: 220px;
 	padding: 10px;
 	
 	-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
@@ -118,7 +131,7 @@ ul.user-list-small {
     height: 47px;
     margin: 0 0px 1px 0;
     color: white;
-    width: 250px;
+    width: 220px;
 		-moz-border-radius: 10px;
     
     -webkit-border-top-right-radius: 10px;
@@ -138,7 +151,7 @@ ul.user-list-small {
       text-indent: -9999px; }
     ul.user-list-small li .user-info {
       padding: 0 0 0 4px;
-      width: 187px;
+      width: 157px;
       display: block;
       float: left;
       position: relative;
@@ -151,7 +164,7 @@ ul.user-list-small {
         margin: 3px 0 0 0;
         padding: 0;
         color: #666666;
-        width: 138px;
+        width: 108px;
         white-space: nowrap;
         overflow: hidden;
         -o-text-overflow: ellipsis;
@@ -168,7 +181,7 @@ ul.user-list-small {
         top: 0px;
         padding: 0 0 0 0;
         z-index: 2;
-        width: 180px;
+        width: 150px;
         white-space: nowrap;
         overflow: hidden;
         outline: 0; }

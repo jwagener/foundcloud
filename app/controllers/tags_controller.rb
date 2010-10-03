@@ -5,7 +5,7 @@ class TagsController < AdminController
     nested.add_link("Users", [:users])   
     #config.action_links.add 'change_plan', :label => 'Change Plan', :type => :record
     
-    action_links.add '  ', :type => 'record', :label => 'Add User'
+    action_links.add 'add_user_link', :type => :member, :label => 'Add User'
     #  columns[:users].set_link('nested', :parameters =>    {:associations => :users})
   end
   
