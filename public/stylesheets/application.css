@@ -38,6 +38,10 @@ h1 span {
 }
 
 h2 {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
   font-size: 35px;
   font-weight: bold;
   opacity: 0.6;
@@ -58,8 +62,8 @@ h2 {
 .tag.active {
   width: 300px;
   opacity: 1;
-  -webkit-transform: scale(1.2,1.2);
-  margin-top: 100px;
+/*  -webkit-transform: scale(1.1,1.1);*/
+/*  margin-top: 100px; */
 }
 
 .user-image-badge {
@@ -90,6 +94,7 @@ a {
 }
 
 .play, .follow.follow-link {
+	z-index: 999;
   opacity: 0;
   -webkit-transition: opacity .5s ease-out;
   -moz-transition: opacity .5s ease-out;
