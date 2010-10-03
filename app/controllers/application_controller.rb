@@ -4,8 +4,12 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
-  
+protected  
+  def logged_in?
+    !!session[:logged_in]
+  end
+    
+  def login_required
+    redirect_to root_url unless logged_in?
+  end
 end

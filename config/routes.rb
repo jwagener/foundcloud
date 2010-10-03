@@ -1,6 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users, :active_scaffold => :user
+# =>  map.resources :users, :active_scaffold => :user
   map.resources :tags, :active_scaffold  => :tag
+  
+  
+  map.login   '/login', :controller => :admin, :action => :login
+  map.logout  '/logout', :controller => :admin, :action => :logout
+
+  #map.namespace :admin do |admin|
+  #  admin.resources :tags, :active_scaffold  => :tag
+  #  
+  #end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 
