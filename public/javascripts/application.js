@@ -100,7 +100,7 @@ $(function(){
       if(history.pushState) {
         history.pushState({},$(this).find('h2').text(),$(this).find('h2').attr("data"));
       }    
-	    $(this).addClass("active");
+	    $(this).addClass("active").siblings().removeClass("active");
     })
     .live('mouseleave',function() {
   	  $(this).removeClass("active");
