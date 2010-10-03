@@ -2,7 +2,7 @@
   %a.follow.follow-link{:href => "##{user.sc_id}", :title => 'Follow'} +
   %a.play{:href => "##{user.sc_id}", :title => 'Play'}
   %a.user-image-badge{:href => user.permalink_url, :style => "background-image: url(#{user.avatar_url})"}= user.username	
-  %span.user-info
+  .user-info
     %a.user-link{:href => user.permalink_url}= user.username
     %div= "#{user.follower_count} followers"
     %span.extra-info= #[user.full_name, user.city].reject(&:blank?).join(", ")
