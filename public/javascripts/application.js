@@ -95,9 +95,11 @@ $(function(){
 		return false;
 	});
 	
-	////// scrolling code
 	$(".tag")
 	  .live('mouseenter',function() {
+      if(history.pushState) {
+        history.pushState({},$(this).find('h2').text(),$(this).find('h2').attr("data"));
+      }    
 	    $(this).addClass("active");
     })
     .live('mouseleave',function() {
@@ -111,5 +113,7 @@ $(function(){
     .live('mouseleave',function() {
   	  $(this).removeClass("active");
   	});
+
+
   	
 });

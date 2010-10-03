@@ -4,7 +4,7 @@
       %span.first-plus
         +
         %span Follow all
-    %h2= tag.name
+    %h2{:data => tag.permalink}= tag.name
 
   %ul.user-list-small
     = render :partial => 'tags/user', :collection => tag.users
