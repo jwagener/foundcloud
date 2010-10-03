@@ -9,7 +9,7 @@ module Admin
     def login
       if params[:secret] == SECRET 
         session[:logged_in] = true 
-        redirect_to tags_path
+        redirect_to :controller => 'admin/tags'
       else
         render :text => 'nope'
       end
