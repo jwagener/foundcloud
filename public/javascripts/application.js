@@ -62,7 +62,14 @@ function path_to_url(path){
 	return 'http://api.soundcloud.com' + path + '&consumer_key=' + SC.Connect.client_id;
 }
 
+$(window).resize(function() {
+  $(".tag").height($(".content").height()-100);
+});
+
 $(function(){
+  // init heights
+  $(".tag").height($(".content").height()-100);
+
 	$('a.play').live('click', function(){
 		var that = this;
 		if($(this).hasClass("playing")){

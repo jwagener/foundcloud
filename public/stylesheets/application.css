@@ -13,8 +13,7 @@ body {
   font-family : Helvetica, Arial, sans-serif;
   overflow: scroll;
 
-  margin: 20px;
-	margin-left: 200px;
+  margin: 0px;
 
   -moz-user-select: none;
   -khtml-user-select : none;
@@ -36,6 +35,7 @@ h1 {
   top: 20px;
   left: 20px;
   z-index: 1000;
+  width: 1000px;
 }
 
 h1 span {
@@ -58,6 +58,11 @@ h2 {
 .content {
   position: absolute;
   top: 0px;
+  right: 0px;
+  left: 0;
+  bottom: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
 .user-link {
@@ -69,7 +74,6 @@ h2 {
 }
 
 .tag {
-  float: left;
   width: 250px;
   height: 1000px;
   opacity: 0.8;
@@ -78,6 +82,8 @@ h2 {
   -webkit-transform: scale(1.0,1.0);
   margin: 0 10px 0 10px;
   padding: 100px 0 0 10px;
+  overflow-y: scroll;
+  display: inline-block;
 }
 
 .tag.active h2 {
@@ -133,7 +139,7 @@ a {
   position: absolute;
   left: 40px;
   top: 0;
-  width: 100%;
+  width: 83%;
 }
 
 .first-plus {
