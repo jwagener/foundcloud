@@ -1,4 +1,4 @@
-.tag{:style => "left: #{200*tag.position}px"}
+.tag{:style => "left: #{200*tag.position}px", :class => ("active" if tag == @tag)}
   .info
     %a.follow.follow-all-link{:href => "##{tag.users.map(&:sc_id).join(',')}"}
       %span.first-plus
