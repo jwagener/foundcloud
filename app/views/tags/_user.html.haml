@@ -5,3 +5,4 @@
 		%div 321 followers
 		%a.follow.follow-link{:href => "##{user.sc_id}", :title => 'follow'} +
 		%a.play{:href => "##{user.sc_id}", :title => 'player'} &gt;
+		%span.extra-info= #[user.full_name, user.city].reject(&:blank?).join(", ")

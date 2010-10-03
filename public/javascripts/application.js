@@ -43,6 +43,11 @@ function follow(id, callback){
 	$.postCORS("https://api.soundcloud.com/me/followings/"+id+".json?oauth_token=" + SC.Connect.oauth_token, {'_method': 'PUT'}, callback);
 }
 
+function unfollow(id, callback){
+	$.postCORS("https://api.soundcloud.com/me/followings/"+id+".json?oauth_token=" + SC.Connect.oauth_token, {'_method': 'DELETE'}, callback);
+}
+
+
 function sc_connect(){
 	var url = 'https://soundcloud.com/connect?client_id=' + SC.Connect.client_id + '&display=popup&response_type=token&redirect_uri=' + 'http://localhost:3001/sc_connect_complete.html'; 	
 	SC.Connect.popup_window = window.open(url ,"sc_connect_popup","location=1, width=456, height=500,toolbar=no,scrollbars=yes");
@@ -53,7 +58,6 @@ function path_to_url(path){
 }
 
 $(function(){
-	
 	$('a.play').live('click', function(){
 		var that = this;
 		if($(this).html()==='||'){

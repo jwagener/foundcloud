@@ -1,46 +1,22 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users, :active_scaffold => :user
-  map.resources :tags, :active_scaffold  => :tag
+# =>  map.resources :users, :active_scaffold => :user
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  map.login   '/login',  :controller => 'admin/admin', :action => :login
+  map.logout  '/logout', :controller => 'admin/admin', :action => :logout
 
-  # Sample of regular route:
-  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
-  # Keep in mind you can assign values other than :controller and :action
+  map.namespace :admin do |admin|
+    admin.resources :tags, :active_scaffold  => :tag
+    admin.connect '/tags/:id/do_add_user', :controller=>"tags", :action=>"do_add_user_link"
+    admin.connect '/tags/:id/add_user',    :controller=>"tags", :action=>"add_user_link"
+  end
 
-  # Sample of named route:
-  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
-
-  # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
-
-  # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
-  # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
-  #   end
-
-  # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "home"
-  map.tag  '/:permalink', :controller => :home, :action => :show
+  map.root :controller => :home
+  map.tag  '/:permalink.:format', :controller => :home, :action => :show
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+#  map.connect ':controller/:action/:id'
+#  map.connect ':controller/:action/:id.:format'
 end
