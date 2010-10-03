@@ -1,15 +1,25 @@
 ActionController::Routing::Routes.draw do |map|
 # =>  map.resources :users, :active_scaffold => :user
-  map.resources :tags, :active_scaffold  => :tag
-  
-  
-  map.login   '/login', :controller => :admin, :action => :login
-  map.logout  '/logout', :controller => :admin, :action => :logout
 
-  #map.namespace :admin do |admin|
-  #  admin.resources :tags, :active_scaffold  => :tag
-  #  
-  #end
+  map.login   '/login',  :controller => 'admin/admin', :action => :login
+  map.logout  '/logout', :controller => 'admin/admin', :action => :logout
+
+  map.namespace :admin do |admin|
+    admin.resources :tags, :active_scaffold  => :tag
+    
+#    admin.connect '/admin/do_add_user', :controller=>"admin/tags", :action=>"do_add_user_link"
+#    admin.connect '/admin/tags/:id/add_user',    :controller=>"admin/tags", :action=>"add_user_link"
+
+#admin.connect '/admin/tags/:id/do_add_user', :controller=>"admin/tags", :action=>"do_add_user_link"
+#admin.connect '/admin/tags/:id/add_user',    :controller=>"admin/tags", :action=>"add_user_link"
+
+admin.connect '/tags/:id/do_add_user', :controller=>"tags", :action=>"do_add_user_link"
+admin.connect '/tags/:id/add_user',    :controller=>"tags", :action=>"add_user_link"
+
+  end
+  
+
+#  map.resources :tags, :active_scaffold  => :tag
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -51,6 +61,6 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+#  map.connect ':controller/:action/:id'
+#  map.connect ':controller/:action/:id.:format'
 end
