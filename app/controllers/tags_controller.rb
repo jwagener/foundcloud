@@ -3,6 +3,7 @@ class TagsController < AdminController
     list.columns.exclude :users, :image_url, :updated_at, :created_at
     list.sorting = {:position => 'ASC'}
     action_links.add 'add_user_link', :type => :member, :label => 'Add User'
+
   #    show.link.action :view_action
   #    show.link.inline true    
   end
