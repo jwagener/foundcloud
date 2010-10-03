@@ -11,11 +11,20 @@ class TagsController < AdminController
   
   
   def add_user_link
-    
+    @tag = Tag.find_by_id(params[:id])
   end
 
   def do_add_user_link
+    @tag = Tag.find_by_id(params[:id])
+    urls = params[:tag][:urls].to_s.split("\n").compact.map(&:strip).reject(&:blank?)
     
+    urls.each do |url|
+      u = User.from_url(url)
+      u.tag_id = @tag.id
+      u.save
+    end
+    
+    redirect_to url_for(:action => 'edit', :id => @tag.id)
   end
   
 end
