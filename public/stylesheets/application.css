@@ -60,6 +60,12 @@ h2 {
   top: 0px;
 }
 
+.user-link {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
 .tag {
   float: left;
   width: 250px;
@@ -72,6 +78,9 @@ h2 {
   padding: 100px 0 0 10px;
 }
 
+.tag.active h2 {
+	color: #E00;	
+}
 .tag.active {
   width: 300px;
   opacity: 1;
