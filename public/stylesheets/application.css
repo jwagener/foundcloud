@@ -51,6 +51,12 @@ h2 {
   margin: 0 0 20px 0;
 }
 
+.user-link {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
 .tag {
   float: left;
   width: 250px;
@@ -62,6 +68,9 @@ h2 {
   margin-top: 0px;
 }
 
+.tag.active h2 {
+	color: #E00;	
+}
 .tag.active {
   width: 300px;
   opacity: 1;
