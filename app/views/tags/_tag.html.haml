@@ -1,8 +1,10 @@
 .tag{:style => "left: #{200*tag.position}px"}
-	.info
-		%a.follow.follow-all-link{:href => "##{tag.users.map(&:sc_id).join(',')}", :title => "follow all"}
-			%span.first-plus  +
-		%h2= tag.name
-		
-	%ul.user-list-small
-		= render :partial => 'tags/user', :collection => tag.users
+  .info
+    %a.follow.follow-all-link{:href => "##{tag.users.map(&:sc_id).join(',')}"}
+      %span.first-plus
+        +
+        %span Follow all
+    %h2= tag.name
+
+  %ul.user-list-small
+    = render :partial => 'tags/user', :collection => tag.users

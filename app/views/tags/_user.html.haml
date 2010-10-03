@@ -1,8 +1,8 @@
 %li.user.small{:class => "user-id-#{user.sc_id}"}
-	%a.user-image-badge{:href => user.permalink_url, :style => "background-image: url(#{user.avatar_url})"}= user.username	
-	%span.user-info
-		%a.user-link{:href => user.permalink_url}= user.username
-		%div 321 followers
-		%a.follow.follow-link{:href => "##{user.sc_id}", :title => 'follow'} +
-		%a.play{:href => "##{user.sc_id}", :title => 'player'} &gt;
-		%span.extra-info= #[user.full_name, user.city].reject(&:blank?).join(", ")
+  %a.follow.follow-link{:href => "##{user.sc_id}", :title => 'Follow'} +
+  %a.play{:href => "##{user.sc_id}", :title => 'Play'}
+  %a.user-image-badge{:href => user.permalink_url, :style => "background-image: url(#{user.avatar_url})"}= user.username	
+  %span.user-info
+    %a.user-link{:href => user.permalink_url}= user.username
+    %div 321 followers
+    %span.extra-info= #[user.full_name, user.city].reject(&:blank?).join(", ")

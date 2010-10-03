@@ -60,20 +60,20 @@ function path_to_url(path){
 $(function(){
 	$('a.play').live('click', function(){
 		var that = this;
-		if($(this).html()==='||'){
+		if($(this).hasClass("playing")){
 			soundManager.stop('player');
-			$(this).html('>');
-		}else{
+			$(this).removeClass('playing');
+		} else {
 			var user_id = $(this).attr('href').split("#")[1];
 			
 			soundManager.destroySound('player');
 			
-			$('a.play').html('>');
-			$(that).html('||');
+			$('a.play').removeClass('playing');
+			$(that).addClass('playing');
 			$.getCORS(path_to_url('/users/' + user_id + '/tracks.json?filter=streamable'), null, function(r){
 				soundManager.createSound('player', path_to_url('/tracks/'+ r[0].id + '/stream?'));
-				soundManager.play('player');			
-			});			
+				soundManager.play('player');
+			});
 		}
 		return false;
 	});
@@ -90,10 +90,21 @@ $(function(){
 		return false;
 	});
 	
-	
 	////// scrolling code
-	
-	
-	
-	
+	$(".tag")
+	  .live('mouseenter',function() {
+	    $(this).addClass("active");
+    })
+    .live('mouseleave',function() {
+  	  $(this).removeClass("active");
+  	});
+  	
+  $(".small.user")
+	  .live('mouseenter',function() {
+	    $(this).addClass("active");
+    })
+    .live('mouseleave',function() {
+  	  $(this).removeClass("active");
+  	});
+  	
 });
