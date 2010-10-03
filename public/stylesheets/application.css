@@ -28,6 +28,7 @@ h1 {
 h1 span {
   font-size: 25px;
   opacity: 0.7;
+  text-transform: uppercase;
 }
 
 h2 {
