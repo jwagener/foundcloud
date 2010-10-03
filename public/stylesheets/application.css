@@ -9,6 +9,18 @@ ol, ul {list-style: none;}
 hr {display: none; visibility: hidden;}
 :focus {outline: 0;}
 
+h1 {
+	background-image: url(/images/foundcloud.png);
+  display: block;
+  width: 183px;
+  height: 33px;
+  text-indent: -9999px;
+	float: left;
+}
+
+p.tagline {
+	
+}
 a.play {
 	display: block;
 	position: absolute;
@@ -95,6 +107,11 @@ ul.user-list-small {
 
 
 ul.user-list-small {
+	filter:alpha(opacity=92);
+	-moz-opacity:0.92;
+	-khtml-opacity: 0.92;
+	opacity: 0.92;
+	
   margin: 0 auto; }
   ul.user-list-small li {
     display: block;
